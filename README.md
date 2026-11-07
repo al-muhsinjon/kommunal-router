@@ -1,5 +1,9 @@
 # AI Intern Take-Home: kommunal murojaatlarni avtomatik yo'naltirish
 
+**Tayyor yechim:** [ishga tushirish](RUN.md), [natijalar va xatolar tahlili](REPORT.md),
+[matematik izohlar](MATH.md), [loss grafigi](loss.png), [barcha metrikalar](evaluation.json).
+Quyida topshiriqning asl matni saqlangan.
+
 **Vaqt:** taxminan 3 soat. Ko'proq vaqt sarflash shart emas.
 **Topshirish muddati:** 2026-yil 9-noyabr, dushanba — suhbatdan oldin.
 **Topshirish shakli:** public GitHub repo havolasi.
