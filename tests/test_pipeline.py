@@ -92,10 +92,12 @@ class TextTests(unittest.TestCase):
         for text in ("Газ ҳиди келяпти", "Gaz quvuri yorilgan", "Sim uzilib yotibdi",
                      "Ustundagi sim osilib qolgan", "Yerto'lani suv bosgan", "Tok urdi",
                      "Transformator yonida uchqun chiqdi", "Запах газа", "Оборван провод", "Прорвало трубу",
-                     "Gaz hidi yo'q, lekin sim uzilgan"):
+                     "Gaz hidi yo'q, lekin sim uzilgan", "Suv yo'q va sim uzilgan",
+                     "Gaz hidi yo'qolmayapti"):
             self.assertEqual(is_urgent(text), 1, text)
         for text in ("Gaz bosimi past", "Suv hisoblagichini tekshiring", "Axlatdan hid chiqyapti",
-                     "Gaz hidi yo'q", "Газ ҳиди йўқ", "Нет запаха газа", "Gaz uchun qarzim bor"):
+                     "Gaz hidi yo'q", "Газ ҳиди йўқ", "Нет запаха газа", "Gaz uchun qarzim bor",
+                     "Sim uzilmagan", "Gaz hidi kelmayapti"):
             self.assertEqual(is_urgent(text), 0, text)
 
 

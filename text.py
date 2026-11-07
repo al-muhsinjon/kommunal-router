@@ -46,8 +46,11 @@ def is_urgent(text):
     )
     for clause in re.split(r"[,;.!?]|\blekin\b|\bно\b", text.lower()):
         clause = normalize(clause)
-        if re.search(r"\b(?:yoq|emas|sezilmay\w*)\b", clause):
-            continue
-        if any(re.search(pattern, clause) for pattern in patterns):
-            return 1
+        for pattern in patterns:
+            for match in re.finditer(pattern, clause):
+                negated = (re.search(r"(?:magan|may)\w*\b", match[0])
+                           or re.search(r"\b(?:yoq|emas)\s*$", clause[:match.start()])
+                           or re.match(r"\s+(?:yoq|emas|(?:kel|sezil)may\w*)\b", clause[match.end():]))
+                if not negated:
+                    return 1
     return 0
