@@ -20,11 +20,11 @@ RUSSIAN = {
 
 
 def normalize(text):
-    text = unicodedata.normalize("NFKC", text).lower().replace("ё", "е")
-    text = re.sub(r"[а-яўқғҳ]+", lambda m: next(
-        (value for key, value in RUSSIAN.items() if m[0].startswith(key)), m[0]), text)
+    text = unicodedata.normalize("NFKC", re.sub(r"['‘’ʻʼ`´ʹъь]", "", text)).lower()
+    text = re.sub(r"[а-яёўқғҳ]+", lambda m: next(
+        (value for key, value in RUSSIAN.items() if m[0].replace("ё", "е").startswith(key)
+         and (key not in ("нет", "не") or m[0] == key)), m[0]), text)
     text = "".join(CYRILLIC.get(c, c) for c in text)
-    text = re.sub(r"['‘’ʻʼ`´ʹъь]", "", text)
     return " ".join(re.findall(r"[a-z0-9]+", text))
 
 
@@ -41,6 +41,7 @@ def is_urgent(text):
         r"\bsim\w*\b.{0,35}\b(?:uzil|osil)\w*",
         r"\b(?:uzil|osil)\w*\b.{0,35}\bsim\w*",
         r"\bquvur\w*\b.{0,35}\b(?:yoril|teshil)\w*",
+        r"\b(?:yoril|teshil)\w*\b.{0,35}\bquvur\w*",
         r"\bsuv\w*\s+(?:bos|tosh)\w*", r"\btok\s+ur\w*", r"\buchqun\w*",
     )
     for clause in re.split(r"[,;.!?]|\blekin\b|\bно\b", text.lower()):
