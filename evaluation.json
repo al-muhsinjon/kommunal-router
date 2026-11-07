@@ -1,0 +1,775 @@
+{
+  "config": {
+    "lr": 0.5,
+    "l2": 0.001,
+    "epochs": 600
+  },
+  "cv_seed": 42,
+  "cv_folds": 3,
+  "trials": [
+    {
+      "config": {
+        "lr": 0.5,
+        "l2": 0.001,
+        "epochs": 600
+      },
+      "macro_f1": 0.8043643905114495,
+      "errors": [
+        {
+          "id": "train-004",
+          "text": "Suv hisoblagich ko'rsatkichini qanday topshiraman",
+          "label": "water",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-018",
+          "text": "Kanalizatsiya tiqilib qolgan",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-023",
+          "text": "Suv hisoblagichini tekshirib berishingizni so'rayman",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-026",
+          "text": "Kechadan beri gaz berilmayapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-027",
+          "text": "Suvdan yomon hid kelyapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-029",
+          "text": "Podyezddagi lampochkalar yonmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-036",
+          "text": "Elektr qachon beriladi, uch soatdan beri yo'q",
+          "label": "electricity",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-040",
+          "text": "Kanalizatsiya to'lib, hovliga chiqib ketdi",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-041",
+          "text": "Issiq suv berilmayapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-042",
+          "text": "Simlar uzilib yerda yotibdi, xavfli",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-060",
+          "text": "Transformator yonida uchqun chiqyapti",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-061",
+          "text": "Axlat yoqilyapti, tutun uyga kiryapti",
+          "label": "waste",
+          "predicted": "electricity"
+        },
+        {
+          "id": "train-064",
+          "text": "Hisoblagich ekrani o'chib qolgan, ko'rsatkichni ko'rib bo'lmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-065",
+          "text": "Uyimizda kechadan beri svet yo'q",
+          "label": "electricity",
+          "predicted": "water"
+        }
+      ]
+    },
+    {
+      "config": {
+        "lr": 0.5,
+        "l2": 0.01,
+        "epochs": 600
+      },
+      "macro_f1": 0.7788484848484849,
+      "errors": [
+        {
+          "id": "train-004",
+          "text": "Suv hisoblagich ko'rsatkichini qanday topshiraman",
+          "label": "water",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-018",
+          "text": "Kanalizatsiya tiqilib qolgan",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-019",
+          "text": "Yangi gaz hisoblagich o'rnatish uchun ariza",
+          "label": "gas",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-023",
+          "text": "Suv hisoblagichini tekshirib berishingizni so'rayman",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-026",
+          "text": "Kechadan beri gaz berilmayapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-027",
+          "text": "Suvdan yomon hid kelyapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-029",
+          "text": "Podyezddagi lampochkalar yonmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-036",
+          "text": "Elektr qachon beriladi, uch soatdan beri yo'q",
+          "label": "electricity",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-040",
+          "text": "Kanalizatsiya to'lib, hovliga chiqib ketdi",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-041",
+          "text": "Issiq suv berilmayapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-042",
+          "text": "Simlar uzilib yerda yotibdi, xavfli",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-047",
+          "text": "Ko'chada gaz quvuridan shovqin chiqyapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-060",
+          "text": "Transformator yonida uchqun chiqyapti",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-061",
+          "text": "Axlat yoqilyapti, tutun uyga kiryapti",
+          "label": "waste",
+          "predicted": "electricity"
+        },
+        {
+          "id": "train-064",
+          "text": "Hisoblagich ekrani o'chib qolgan, ko'rsatkichni ko'rib bo'lmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-065",
+          "text": "Uyimizda kechadan beri svet yo'q",
+          "label": "electricity",
+          "predicted": "water"
+        }
+      ]
+    },
+    {
+      "config": {
+        "lr": 0.5,
+        "l2": 0.05,
+        "epochs": 600
+      },
+      "macro_f1": 0.7916221033868093,
+      "errors": [
+        {
+          "id": "train-004",
+          "text": "Suv hisoblagich ko'rsatkichini qanday topshiraman",
+          "label": "water",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-018",
+          "text": "Kanalizatsiya tiqilib qolgan",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-019",
+          "text": "Yangi gaz hisoblagich o'rnatish uchun ariza",
+          "label": "gas",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-023",
+          "text": "Suv hisoblagichini tekshirib berishingizni so'rayman",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-026",
+          "text": "Kechadan beri gaz berilmayapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-027",
+          "text": "Suvdan yomon hid kelyapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-029",
+          "text": "Podyezddagi lampochkalar yonmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-036",
+          "text": "Elektr qachon beriladi, uch soatdan beri yo'q",
+          "label": "electricity",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-040",
+          "text": "Kanalizatsiya to'lib, hovliga chiqib ketdi",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-041",
+          "text": "Issiq suv berilmayapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-042",
+          "text": "Simlar uzilib yerda yotibdi, xavfli",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-047",
+          "text": "Ko'chada gaz quvuridan shovqin chiqyapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-060",
+          "text": "Transformator yonida uchqun chiqyapti",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-064",
+          "text": "Hisoblagich ekrani o'chib qolgan, ko'rsatkichni ko'rib bo'lmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-065",
+          "text": "Uyimizda kechadan beri svet yo'q",
+          "label": "electricity",
+          "predicted": "water"
+        }
+      ]
+    },
+    {
+      "config": {
+        "lr": 1.0,
+        "l2": 0.001,
+        "epochs": 600
+      },
+      "macro_f1": 0.8043643905114495,
+      "errors": [
+        {
+          "id": "train-004",
+          "text": "Suv hisoblagich ko'rsatkichini qanday topshiraman",
+          "label": "water",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-018",
+          "text": "Kanalizatsiya tiqilib qolgan",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-023",
+          "text": "Suv hisoblagichini tekshirib berishingizni so'rayman",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-026",
+          "text": "Kechadan beri gaz berilmayapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-027",
+          "text": "Suvdan yomon hid kelyapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-029",
+          "text": "Podyezddagi lampochkalar yonmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-036",
+          "text": "Elektr qachon beriladi, uch soatdan beri yo'q",
+          "label": "electricity",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-040",
+          "text": "Kanalizatsiya to'lib, hovliga chiqib ketdi",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-041",
+          "text": "Issiq suv berilmayapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-042",
+          "text": "Simlar uzilib yerda yotibdi, xavfli",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-060",
+          "text": "Transformator yonida uchqun chiqyapti",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-061",
+          "text": "Axlat yoqilyapti, tutun uyga kiryapti",
+          "label": "waste",
+          "predicted": "electricity"
+        },
+        {
+          "id": "train-064",
+          "text": "Hisoblagich ekrani o'chib qolgan, ko'rsatkichni ko'rib bo'lmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-065",
+          "text": "Uyimizda kechadan beri svet yo'q",
+          "label": "electricity",
+          "predicted": "water"
+        }
+      ]
+    },
+    {
+      "config": {
+        "lr": 1.0,
+        "l2": 0.01,
+        "epochs": 600
+      },
+      "macro_f1": 0.7788484848484849,
+      "errors": [
+        {
+          "id": "train-004",
+          "text": "Suv hisoblagich ko'rsatkichini qanday topshiraman",
+          "label": "water",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-018",
+          "text": "Kanalizatsiya tiqilib qolgan",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-019",
+          "text": "Yangi gaz hisoblagich o'rnatish uchun ariza",
+          "label": "gas",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-023",
+          "text": "Suv hisoblagichini tekshirib berishingizni so'rayman",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-026",
+          "text": "Kechadan beri gaz berilmayapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-027",
+          "text": "Suvdan yomon hid kelyapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-029",
+          "text": "Podyezddagi lampochkalar yonmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-036",
+          "text": "Elektr qachon beriladi, uch soatdan beri yo'q",
+          "label": "electricity",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-040",
+          "text": "Kanalizatsiya to'lib, hovliga chiqib ketdi",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-041",
+          "text": "Issiq suv berilmayapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-042",
+          "text": "Simlar uzilib yerda yotibdi, xavfli",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-047",
+          "text": "Ko'chada gaz quvuridan shovqin chiqyapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-060",
+          "text": "Transformator yonida uchqun chiqyapti",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-061",
+          "text": "Axlat yoqilyapti, tutun uyga kiryapti",
+          "label": "waste",
+          "predicted": "electricity"
+        },
+        {
+          "id": "train-064",
+          "text": "Hisoblagich ekrani o'chib qolgan, ko'rsatkichni ko'rib bo'lmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-065",
+          "text": "Uyimizda kechadan beri svet yo'q",
+          "label": "electricity",
+          "predicted": "water"
+        }
+      ]
+    },
+    {
+      "config": {
+        "lr": 1.0,
+        "l2": 0.05,
+        "epochs": 600
+      },
+      "macro_f1": 0.7916221033868093,
+      "errors": [
+        {
+          "id": "train-004",
+          "text": "Suv hisoblagich ko'rsatkichini qanday topshiraman",
+          "label": "water",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-018",
+          "text": "Kanalizatsiya tiqilib qolgan",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-019",
+          "text": "Yangi gaz hisoblagich o'rnatish uchun ariza",
+          "label": "gas",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-023",
+          "text": "Suv hisoblagichini tekshirib berishingizni so'rayman",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-026",
+          "text": "Kechadan beri gaz berilmayapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-027",
+          "text": "Suvdan yomon hid kelyapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-029",
+          "text": "Podyezddagi lampochkalar yonmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-036",
+          "text": "Elektr qachon beriladi, uch soatdan beri yo'q",
+          "label": "electricity",
+          "predicted": "billing"
+        },
+        {
+          "id": "train-040",
+          "text": "Kanalizatsiya to'lib, hovliga chiqib ketdi",
+          "label": "water",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-041",
+          "text": "Issiq suv berilmayapti",
+          "label": "water",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-042",
+          "text": "Simlar uzilib yerda yotibdi, xavfli",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-047",
+          "text": "Ko'chada gaz quvuridan shovqin chiqyapti",
+          "label": "gas",
+          "predicted": "water"
+        },
+        {
+          "id": "train-060",
+          "text": "Transformator yonida uchqun chiqyapti",
+          "label": "electricity",
+          "predicted": "waste"
+        },
+        {
+          "id": "train-064",
+          "text": "Hisoblagich ekrani o'chib qolgan, ko'rsatkichni ko'rib bo'lmayapti",
+          "label": "electricity",
+          "predicted": "gas"
+        },
+        {
+          "id": "train-065",
+          "text": "Uyimizda kechadan beri svet yo'q",
+          "label": "electricity",
+          "predicted": "water"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "labels": [
+      "billing",
+      "electricity",
+      "gas",
+      "waste",
+      "water"
+    ],
+    "per_class": {
+      "billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "electricity": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "gas": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "waste": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "water": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "validation_raw": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "labels": [
+      "billing",
+      "electricity",
+      "gas",
+      "waste",
+      "water"
+    ],
+    "per_class": {
+      "billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "electricity": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "gas": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "waste": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "water": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "validation_errors": [],
+  "validation_raw_errors": [],
+  "initial_loss": 1.6094379124341,
+  "final_loss": 0.4209812848812339
+}
