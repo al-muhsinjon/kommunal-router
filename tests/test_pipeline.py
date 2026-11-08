@@ -138,12 +138,25 @@ class CLITests(unittest.TestCase):
     def test_bad_header_and_incomplete_row_fail_without_output(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             source = Path(folder) / "input.csv"
-            for content in ("id,message\n1,hello\n", "id,text\n1\n"):
+            for content in ("id,message\n1,hello\n", "id,text\n1\n", "id,text\n1,hello,extra\n"):
                 source.write_text(content, encoding="utf-8")
                 process = self.run_cli(folder, source)
                 self.assertNotEqual(process.returncode, 0)
                 self.assertIn("Error:", process.stderr)
                 self.assertFalse((Path(folder) / "result.csv").exists())
+
+    def test_pandas_preserves_literal_na_ids_and_quoted_multiline_text(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            source = Path(folder) / "input.csv"
+            source.write_bytes('id,text\n0001,NA\nNA,"Gaz hidi,\nuy ichida"\n'.encode("utf-8"))
+            self.assertEqual(read_rows(source), [
+                {"id": "0001", "text": "NA"}, {"id": "NA", "text": "Gaz hidi,\nuy ichida"}])
+            process = self.run_cli(folder, source)
+            self.assertEqual(process.returncode, 0, process.stderr)
+            with (Path(folder) / "result.csv").open(encoding="utf-8", newline="") as handle:
+                result = list(csv.DictReader(handle))
+            self.assertEqual([row["id"] for row in result], ["0001", "NA"])
+            self.assertEqual(result[1]["is_urgent"], "1")
 
 
 if __name__ == "__main__":

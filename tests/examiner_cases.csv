@@ -1,0 +1,39 @@
+id,text,label,is_urgent
+check-001,Gaz uchun qarzim qancha bo'ldi?,billing,0
+check-002,Suv to'lovim hisobimga tushmadi,billing,0
+check-003,Elektr kvitansiyasini qayta yuboring,billing,0
+check-004,Оплата за газ прошла два раза,billing,0
+check-005,Газ учун тўлов чеки керак,billing,0
+check-006,"Balansdan pul yechildi, lekin chek chiqmayapti",billing,0
+check-007,Mahallamizda svet yana o'chdi,electricity,0
+check-008,Elektr kuchlanishi pasayib ketdi,electricity,0
+check-009,Уйимизда электр йўқ,electricity,0
+check-010,Провод оборван и лежит на земле,electricity,1
+check-011,Tashqarida sim uzilgan va uchqun chiqmoqda,electricity,1
+check-012,Transfarmator yonida uchqun ko'rinyapti,electricity,1
+check-013,Gaz bosimi tushib plita yonmay qoldi,gas,0
+check-014,"Газ ҳиди келяпти, уйда болалар бор",gas,1
+check-015,На кухне запах газа,gas,1
+check-016,Gaz hisoblagichini yangisiga almashtiring,gas,0
+check-017,"Gaz quvuri yorilib, shovqin chiqarmoqda",gas,1
+check-018,"Gaz hidi yo'q, faqat bosim past",gas,0
+check-019,Ichimlik suvi tongdan beri kelmayapti,water,0
+check-020,Иссиқ сув берилмаяпти,water,0
+check-021,Нет горячей воды,water,0
+check-022,Podvalga suv toshib kiryapti,water,1
+check-023,Kanalizatsiya quvuri tiqilib qoldi,water,0
+check-024,Suv hisoblagichining raqamlari ko'rinmayapti,water,0
+check-025,Chiqindi konteynerlari yana to'lib ketgan,waste,0
+check-026,Мусор не вывозят уже неделю,waste,0
+check-027,Ахлат машинаси бугун ҳам келмади,waste,0
+check-028,Ko'chamizda noqonuniy axlatxona kattalashyapti,waste,0
+check-029,Musur qutisini qachon bo'shatasiz?,waste,0
+check-030,"Gaz hidi emas, konteynerdagi axlat sasiyapti",waste,0
+check-031,Oshxonada gaz sizib chiqmoqda,gas,1
+check-032,Rozetka qizib erib ketdi,electricity,1
+check-033,Vannadan oqayotgan suv pastki qo'shnini bosdi,water,1
+check-034,Mendan bir to'lovni ikki bor olishibdi,billing,0
+check-035,Qattiq maishiy chiqindilar yig'ilmay qolgan,waste,0
+check-036,Ichadigan suvimizda xlor hidi juda kuchli,water,0
+check-037,Пахнет газом в квартире,gas,1
+check-038,Свет мигает и искрит розетка,electricity,1

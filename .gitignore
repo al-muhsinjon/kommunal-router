@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 .pytest_cache/
 output.csv
+examiner_results.local.json

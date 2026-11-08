@@ -1,8 +1,8 @@
 """Train-only stratified CV, final training, and a held-out validation report."""
-import csv
 import json
 from pathlib import Path
 import numpy as np
+import pandas as pd
 from dataio import read_rows
 from metrics import evaluate
 from model import LABELS, Softmax, Tfidf, route, save
@@ -51,10 +51,7 @@ def main():
                   validation_errors=errors(validation, final), validation_raw_errors=errors(validation, raw),
                   initial_loss=model.losses[0], final_loss=model.losses[-1])
     (ROOT / "evaluation.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    with open(ROOT / "loss.csv", "w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
-        writer.writerow(["epoch", "loss"])
-        writer.writerows(enumerate(model.losses))
+    pd.DataFrame({"epoch": range(len(model.losses)), "loss": model.losses}).to_csv(ROOT / "loss.csv", index=False)
     save_loss(model.losses, ROOT / "loss.png")
     print(json.dumps(report["validation"], indent=2))
 

@@ -2,6 +2,7 @@
 
 **Tayyor yechim:** [ishga tushirish](RUN.md), [natijalar va xatolar tahlili](REPORT.md),
 [matematik izohlar](MATH.md), [loss grafigi](loss.png), [barcha metrikalar](evaluation.json).
+[Tekshiruvchi qadamlar va takrorlanadigan sinov](EXAMINER.md).
 Quyida topshiriqning asl matni saqlangan.
 
 **Vaqt:** taxminan 3 soat. Ko'proq vaqt sarflash shart emas.

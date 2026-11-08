@@ -1,6 +1,8 @@
 # Ishga tushirish
 
-Python 3.10+ va NumPy kerak. Tekshirilgan muhit: Python 3.14.7, NumPy 2.5.4.
+Python 3.10+, NumPy va pandas kerak. Tekshirilgan muhit:
+Python 3.14.7, NumPy 2.5.4, pandas 3.1.1. Pandas CSV almashinuvi uchun,
+TF-IDF, softmax va metrikalar NumPy bilan noldan yozilgan.
 Kutubxonani bir marta o'rnatgandan so'ng barcha buyruqlar internetsiz ishlaydi.
 `model.npz` repoga qo'shilgan; predict vaqtida o'qitish yoki tarmoqqa chiqish yo'q.
 
@@ -34,6 +36,7 @@ Noto'g'ri sarlavha yoki to'liq bo'lmagan qator uchun CLI xato kodi bilan tugaydi
 ```bash
 python train.py
 python -m unittest discover -s tests -v
+python tests/check_submission.py
 ```
 
 Windows virtual muhitida `python` o'rniga `.\.venv\Scripts\python.exe` ishlating.
@@ -50,12 +53,13 @@ Validation 20 ta misoldan iborat va hyperparametr tanlashga qo'shilmaydi.
 
 ## Kodni o'qish tartibi
 
-1. `text.py`: normalizatsiya, ruscha lug'at, billing va urgency qoidalari.
-2. `model.py`: so'z/harf belgilaridan TF-IDF, softmax, gradient descent, saqlash/yuklash.
-3. `metrics.py`: noldan yozilgan precision, recall, F1, accuracy va confusion matrix.
-4. `train.py`: train-only cross-validation va yakuniy baholash.
-5. `predict.py`: modelni yuklab CSVdan bashorat qilish.
-6. `plot_loss.py`: qo'shimcha kutubxonasiz PNG chizish.
+1. `dataio.py`: pandas orqali CSV o'qish va ustun/qatorlarni tekshirish.
+2. `text.py`: normalizatsiya, ruscha lug'at, billing va urgency qoidalari.
+3. `model.py`: so'z/harf belgilaridan TF-IDF, softmax, gradient descent, saqlash/yuklash.
+4. `metrics.py`: noldan yozilgan precision, recall, F1, accuracy va confusion matrix.
+5. `train.py`: train-only cross-validation va yakuniy baholash.
+6. `predict.py`: modelni yuklab CSVdan bashorat qilish va pandas bilan chiqishni yozish.
+7. `plot_loss.py`: qo'shimcha kutubxonasiz PNG chizish.
 
 Asosiy Python kodlari taxminan 300 qator; testlar alohida. Testlar sonli
 gradient, TF-IDF, barqaror logits, metrikalar, modelni qayta yuklash, yozuvlar,
@@ -65,13 +69,13 @@ tenglashtirib bo'lmaydi.
 
 ## Topshirish
 
-Public GitHub repoga ushbu papkaning Git tarixini push qilish kerak:
+Public repo: [al-muhsinjon/kommunal-router](https://github.com/al-muhsinjon/kommunal-router).
+Tekshiruvchi uchun boshidan oxirigacha qadamlar: [EXAMINER.md](EXAMINER.md).
+Keyingi tasdiqlangan o'zgarishlarni yuborish:
 
 ```bash
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
-git push -u origin HEAD
+git push origin main
 ```
 
-`USERNAME/REPOSITORY` o'rniga haqiqiy bo'sh public repo manzilini qo'ying.
-Kamida beshta mazmunli commit mahalliy tarixda bor. Topshirishda repo havolasini
+Kamida beshta mazmunli commit Git tarixida bor. Topshirishda repo havolasini
 yuboring; `.venv`, vaqtinchalik chiqishlar va credentiallarni qo'shmang.
