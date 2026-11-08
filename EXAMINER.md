@@ -119,7 +119,7 @@ Aniq savol yoki o'zgartirishni oldindan bilmaymiz. Kodni tushunib javob berish k
 
 ## Biz bajargan qo'shimcha sinovning cheklovlari
 
-Development tekshiruvida validation **20/20**, qo'shimcha klassifikatsiya **37/38**
+GitHub'dan olingan toza klon va yangi virtual muhitda validation **20/20**, qo'shimcha klassifikatsiya **37/38**
 (macro-F1 **0.9749**), qo'shimcha urgency **34/38** chiqdi. Qo'shimcha misollar
 modelni o'qitishga yoki hyperparametr tanlashga kiritilmadi.
 
@@ -130,5 +130,8 @@ modelni o'qitishga yoki hyperparametr tanlashga kiritilmadi.
   “Пахнет газом” (`check-037`). Hozirgi qoidalar bu shakllarni qamramaydi.
 
 Bu kichik, qo'lda tuzilgan sinov umumiy sifatni yoki ularning yashirin test
-natijasini kafolatlamaydi. Toza klondagi haqiqiy natijalar alohida
-`EXAMINER_RESULTS.json` fayliga saqlanadi.
+natijasini kafolatlamaydi. Toza klondagi haqiqiy natijalar, tekshirilgan commit,
+muhit versiyalari va vaqtlar [EXAMINER_RESULTS.json](EXAMINER_RESULTS.json) ga saqlandi.
+Faqat requirements orqali o'rnatish, `pip check`, 12 ta test, tayyor model bilan
+aniq CLI buyrug'i, Python tarmog'i bloklangan qayta o'qitish va qayta inference
+bajarildi. Qayta o'qitishdan keyin model, loss va baholash fayllari bir xil chiqdi.

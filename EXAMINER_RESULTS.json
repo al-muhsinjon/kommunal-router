@@ -1,0 +1,233 @@
+{
+  "python": "3.14.7",
+  "numpy": "2.5.4",
+  "pandas": "3.1.1",
+  "model_sha256": "f689d077e634873b956afc2053165bacaf46bb9d56601e26780d76a75033bc10",
+  "conditions": {
+    "input_columns": [
+      "id",
+      "text"
+    ],
+    "python_network_blocked": true,
+    "external_working_directory": true,
+    "model_unchanged": true,
+    "batch_rows": 513
+  },
+  "validation": {
+    "rows": 20,
+    "correct": 20,
+    "labels": [
+      "billing",
+      "electricity",
+      "gas",
+      "waste",
+      "water"
+    ],
+    "per_class": {
+      "billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "electricity": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "gas": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "waste": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "water": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "errors": [],
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "custom": {
+    "rows": 38,
+    "correct": 37,
+    "labels": [
+      "billing",
+      "electricity",
+      "gas",
+      "waste",
+      "water"
+    ],
+    "per_class": {
+      "billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "electricity": {
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "f1": 0.9411764705882353
+      },
+      "gas": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "waste": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "water": {
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1": 0.9333333333333333
+      }
+    },
+    "confusion_matrix": [
+      [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        7
+      ]
+    ],
+    "errors": [
+      {
+        "id": "check-036",
+        "text": "Ichadigan suvimizda xlor hidi juda kuchli",
+        "label": "water",
+        "is_urgent": "0",
+        "predicted": "electricity",
+        "predicted_urgent": "0"
+      }
+    ],
+    "accuracy": 0.9736842105263158,
+    "macro_f1": 0.9749019607843138,
+    "urgency_correct": 34,
+    "urgency_errors": [
+      {
+        "id": "check-031",
+        "text": "Oshxonada gaz sizib chiqmoqda",
+        "label": "gas",
+        "is_urgent": "1",
+        "predicted_urgent": "0"
+      },
+      {
+        "id": "check-032",
+        "text": "Rozetka qizib erib ketdi",
+        "label": "electricity",
+        "is_urgent": "1",
+        "predicted_urgent": "0"
+      },
+      {
+        "id": "check-033",
+        "text": "Vannadan oqayotgan suv pastki qo'shnini bosdi",
+        "label": "water",
+        "is_urgent": "1",
+        "predicted_urgent": "0"
+      },
+      {
+        "id": "check-037",
+        "text": "Пахнет газом в квартире",
+        "label": "gas",
+        "is_urgent": "1",
+        "predicted_urgent": "0"
+      }
+    ]
+  },
+  "cli_seconds": {
+    "validation": 0.974,
+    "custom": 0.96,
+    "batch": 1.075
+  },
+  "reproduction": {
+    "clone_url": "https://github.com/al-muhsinjon/kommunal-router.git",
+    "source_commit": "983749d2b9b6a0cd97003af014dfabb0d1508485",
+    "platform": "win32",
+    "fresh_virtual_environment": true,
+    "packages_loaded_from_fresh_venv": true,
+    "installation": "pip install -r requirements.txt",
+    "pip_check_passed": true,
+    "unit_tests_passed": 12,
+    "exact_cli_command": "python predict.py input.csv output.csv",
+    "inference_before_retraining_passed": true,
+    "offline_retraining_passed": true,
+    "training_seconds": 3.4650596,
+    "predictions_identical_after_retraining": true,
+    "regenerated_artifacts_identical": true
+  }
+}
